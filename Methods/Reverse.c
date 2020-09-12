@@ -20,23 +20,6 @@ void recursinInPlace(int *s, int left, int right)
     }
 }
 
-int twoPointersIteration(int *s, int sSize)
-{
-    // initial left = the first index, right = the last index
-    int left = 0;
-    int right = sSize - 1;
-    while (left < right)
-    {
-        // swap
-        int temp = s[left];
-        s[left] = s[right];
-        s[right] = temp;
-        // move to the next index
-        left += 1;
-        right -= 1;
-    }
-}
-
 // separate it into half
 void reverse(int *list, int n)
 {
