@@ -11,6 +11,15 @@
   *************
  ***************
 *****************
+*****************
+ ***************
+  *************
+   ***********
+    *********
+     *******
+      *****
+       ***
+        *
 
 */
 
@@ -27,7 +36,7 @@ int main()
         space += 1;
     }
     // got space
-    while (temp != n)
+    while (temp <= n)
     {
         // print space
         for (int i = 0; i < space; i++)
@@ -42,6 +51,23 @@ int main()
         printf("\n");
         temp += 2;
         space -= 1;
+    }
+
+    n = 17;
+    space = 0;
+    while (n >= 1)
+    {
+        for (int j = 0; j < space; j++)
+        {
+            printf(" ");
+        }
+        for (int i = 0; i < n; i++)
+        {
+            printf("*");
+        }
+        printf("\n");
+        n -= 2;
+        space += 1;
     }
 
     return 0;
