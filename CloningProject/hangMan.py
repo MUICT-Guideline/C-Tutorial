@@ -28,7 +28,10 @@ def interface(status=list, splt=list):
 
 def hangMan():
     # list of all words
-    words = ['test', 'python', 'C tutorial']
+    words = ['test', 'python', 'C tutorial', 'Phuee', 'Sprite']
+    dead = "he_is_dead"
+    deadString = ""
+    char = []
     # random word
     word = random.choice(words)
     splt = [i for i in word]
@@ -59,13 +62,20 @@ def hangMan():
         for i in range(len(splt)):
             if guess.upper() == splt[i] or guess.lower() == splt[i]:
                 stat[i] = 1
+        if guess not in char:
+            char.append(guess)
+        if guess not in splt:
+            deadString += dead[count]
+            count += 1
         s = interface(stat, splt)
         print(s)
         if 0 not in stat:
             win = True
             print("Winner!!")
             break
-        count += 1
+        print("\n\n")
+        print("Char that be used aleady:", char)
+        print("Status:", deadString)
     if not win:
         print("Lose")
 
