@@ -10,6 +10,8 @@ int main()
     int *ip;
     ip = &a;
     // address of file can be accessed by ampersand &
+    // * = real value of address of variables
+    // & = address of variables
     // address of files are the same a == ip
     // means address of pointers that we assigned, values of pointers is the same of variable (because address is the same)
     printf("Access file a: %x\n", &a);
